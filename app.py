@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for,send_file
 import pandas as pd
 import csv
 from io import TextIOWrapper
@@ -81,7 +81,7 @@ def upload_file():
             format_file.footer(txt_file)
             txt_file.write('\n\n')
     txt_file.close()
-    return f"Genrated Successfully"
+    return send_file('form66.txt',as_attachment=True)
         
         #except Exception as e:
             #return f'Error processing the uploaded file: {str(e)}'
