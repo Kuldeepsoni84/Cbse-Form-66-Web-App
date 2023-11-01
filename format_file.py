@@ -10,12 +10,12 @@ def list_text(l):
         for i in l:
             s=s+','+str(i)
     return s[1::]
-def header(f,page):    
+def header(f,page,c_name,c_no,reg):    
     f.writelines(['SECONDARY SCHOOL CERTIFICATE EXAMINATION 2023'.center(143,' ')])
     f.write('\n')
     f.writelines(['**CBSE-66/ CENTRE MEMO**'.center(143,' ')])
     f.write('\n')
-    f.write(' Region : NOIDA'.ljust(34,' ')+'CENTRE-  841259 :: SUDITI GLOBAL ACADEMY NAGARIYA MAINPURI UP'.ljust(98,' ')+'PAGE : '+str(page))
+    f.write(('| Region : '+reg).ljust(34,' ')+('CENTRE-  '+c_no+' :: '+c_name).ljust(122-(len('| Region : '+reg)+len('PAGE : '+str(page))),' ')+'PAGE : '+str(page))
     f.write('\n')
     f.write('|'+'-'*141+'|')
     f.write('\n')
