@@ -103,6 +103,10 @@ def upload_file():
         iobyte.flush()
         
     return send_file(iobyte,as_attachment=True,download_name="form66.txt")
+@app.route('/sampledfile')
+def dwl_sample_file():
+    return send_file("sampledata.csv",as_attachment=True)
+
 
 if __name__ == '__main__':
     app.run()

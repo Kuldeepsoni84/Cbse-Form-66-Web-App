@@ -11,7 +11,7 @@ def list_text(l):
             s=s+','+str(i)
     return s[1::]
 def header(f,page,c_name,c_no,reg):    
-    f.writelines(['SECONDARY SCHOOL CERTIFICATE EXAMINATION 2023'.center(143,' ')])
+    f.writelines([('SECONDARY SCHOOL CERTIFICATE EXAMINATION 2023').center(143,' ')])
     f.write('\n')
     f.writelines(['**CBSE-66/ CENTRE MEMO**'.center(143,' ')])
     f.write('\n')
